@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.Hackathon.Medicos.API", "Fiap.Hackathon.Medicos.API.csproj", "{87EB8430-F7EF-4AC9-B8ED-7C9BDEF62C9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Medicos", "Medicos", "{A44AFF9A-E1F4-487A-92BB-341925D701B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.Hackathon.Medicos.Application", "..\Medicos\Fiap.Hackathon.Medicos.Application\Fiap.Hackathon.Medicos.Application.csproj", "{2D7812F4-4B0F-41E1-AB69-A1F2F7EED5EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.Hackathon.Medicos.Domain", "..\Medicos\Fiap.Hackathon.Medicos.Domain\Fiap.Hackathon.Medicos.Domain.csproj", "{47B1D978-7AB3-4B74-B7E5-CF3E01A12B67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.Hackathon.Medicos.Infrastructure", "..\Medicos\Infrastructure\Fiap.Hackathon.Medicos.Infrastructure.csproj", "{3A78EC8B-E1F8-4D94-A170-9508477AE8DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pacientes", "Pacientes", "{701DB3A8-B65F-437C-97A1-4B51D80911BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Autenticacao", "Autenticacao", "{C6DA6108-4F74-4FBC-AC06-AC58CFA42A12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Agendamentos", "Agendamentos", "{E129144A-848A-4436-B825-0ECDE5989445}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{04A8375F-94BF-4634-9D8D-B4CECD5E6612}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.Hackathon.Medicos.Application.Abstractions", "..\Medicos\Fiap.Hackathon.Medicos.Application.Abstractions\Fiap.Hackathon.Medicos.Application.Abstractions.csproj", "{08475A85-20A9-4397-8384-8C1051757772}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87EB8430-F7EF-4AC9-B8ED-7C9BDEF62C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87EB8430-F7EF-4AC9-B8ED-7C9BDEF62C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87EB8430-F7EF-4AC9-B8ED-7C9BDEF62C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87EB8430-F7EF-4AC9-B8ED-7C9BDEF62C9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D7812F4-4B0F-41E1-AB69-A1F2F7EED5EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7812F4-4B0F-41E1-AB69-A1F2F7EED5EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D7812F4-4B0F-41E1-AB69-A1F2F7EED5EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D7812F4-4B0F-41E1-AB69-A1F2F7EED5EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47B1D978-7AB3-4B74-B7E5-CF3E01A12B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47B1D978-7AB3-4B74-B7E5-CF3E01A12B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47B1D978-7AB3-4B74-B7E5-CF3E01A12B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47B1D978-7AB3-4B74-B7E5-CF3E01A12B67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A78EC8B-E1F8-4D94-A170-9508477AE8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A78EC8B-E1F8-4D94-A170-9508477AE8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A78EC8B-E1F8-4D94-A170-9508477AE8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A78EC8B-E1F8-4D94-A170-9508477AE8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08475A85-20A9-4397-8384-8C1051757772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08475A85-20A9-4397-8384-8C1051757772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08475A85-20A9-4397-8384-8C1051757772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08475A85-20A9-4397-8384-8C1051757772}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{87EB8430-F7EF-4AC9-B8ED-7C9BDEF62C9F} = {A44AFF9A-E1F4-487A-92BB-341925D701B7}
+		{2D7812F4-4B0F-41E1-AB69-A1F2F7EED5EF} = {A44AFF9A-E1F4-487A-92BB-341925D701B7}
+		{47B1D978-7AB3-4B74-B7E5-CF3E01A12B67} = {A44AFF9A-E1F4-487A-92BB-341925D701B7}
+		{3A78EC8B-E1F8-4D94-A170-9508477AE8DC} = {A44AFF9A-E1F4-487A-92BB-341925D701B7}
+		{08475A85-20A9-4397-8384-8C1051757772} = {A44AFF9A-E1F4-487A-92BB-341925D701B7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7EA57CB-F911-412C-B382-04D782CA07FE}
+	EndGlobalSection
+EndGlobal
