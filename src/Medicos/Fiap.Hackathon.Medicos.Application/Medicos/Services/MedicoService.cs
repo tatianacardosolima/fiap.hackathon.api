@@ -1,5 +1,4 @@
 ﻿using Fiap.Hackathon.Common.Shared.Abstractions;
-using Fiap.Hackathon.Common.Shared.Interfaces;
 using Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.IFactories;
 using Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.IRepositories;
 using Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.IServices;
