@@ -11,10 +11,10 @@ namespace Fiap.Hackathon.Common.Shared.Abstractions
         where TResponse: ResponseBase
 
     {
-        protected readonly IBaseRepository<TEntity> _repository;
+        protected readonly IRepository<TEntity, Guid> _repository;
         protected readonly IFactory<TRequest, TEntity> _factory;
 
-        public ServiceBase(IBaseRepository<TEntity> repository,
+        public ServiceBase(IRepository<TEntity, Guid> repository,
             IFactory<TRequest, TEntity> factory)
         {
             _repository = repository;
@@ -26,8 +26,8 @@ namespace Fiap.Hackathon.Common.Shared.Abstractions
 
             var entity = await _factory.CreateAsync(request);
             
-            await _repository.AddAsync(entity);
-            
+            await _repository.InsertAsync(entity);
+            await _repository.SaveChangesAsync();
             
             return new DefaultResponse(true, "Registro Inserido com sucesso", new { Id = entity.Id});
         }
@@ -37,8 +37,8 @@ namespace Fiap.Hackathon.Common.Shared.Abstractions
 
             var entity = await _factory.CreateAsync(request);
 
-            await _repository.UpdateAsync(entity.Id, entity);
-            
+            _repository.Update(entity);
+            await _repository.SaveChangesAsync();
 
             return new DefaultResponse(true, "Registro Alterado com sucesso", new { Id = entity.Id });
         }
@@ -49,8 +49,8 @@ namespace Fiap.Hackathon.Common.Shared.Abstractions
             TEntity entity = await _repository.GetByIdAsync(id);
             DomainException.ThrowWhen(entity == null, "Registro não encontrado");
             
-            await _repository.DeleteAsync(id);
-            
+            _repository.Delete(entity);
+            await _repository.SaveChangesAsync();
             
             return new DefaultResponse(true, "Registro excluído");
         }

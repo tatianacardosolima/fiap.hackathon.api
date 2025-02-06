@@ -10,4 +10,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuildingBlocks\Fiap.Hackathon.Common.Shared\Fiap.Hackathon.Common.Shared.csproj" />
+    <ProjectReference Include="..\Fiap.Hackathon.Medicos.Application.Abstractions\Fiap.Hackathon.Medicos.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\Fiap.Hackathon.Medicos.Application\Fiap.Hackathon.Medicos.Application.csproj" />
+    <ProjectReference Include="..\Fiap.Hackathon.Medicos.Domain\Fiap.Hackathon.Medicos.Domain.csproj" />
+    <ProjectReference Include="..\Fiap.Hackathon.Medicos.Infrastructure\Fiap.Hackathon.Medicos.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
