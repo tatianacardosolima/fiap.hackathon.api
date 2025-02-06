@@ -23,11 +23,7 @@ namespace Fiap.Hackathon.Medicos.Domain.Entities
         public string Senha { get; private set; } = string.Empty;
         public string Especialidade { get; private set; } = string.Empty;
 
-        public override ResponseBase GetResponse()
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public override bool Validate()
         {
             throw new NotImplementedException();

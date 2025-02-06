@@ -17,7 +17,7 @@ namespace Fiap.Hackathon.Medicos.Infrastructure.Abstractions
 
         public async Task<T> GetByIdAsync(Guid id)
         {
-            return await _collection.Find(Builders<T>.Filter.Eq("_id", id)).FirstOrDefaultAsync();
+            return await _collection.Find(Builders<T>.Filter.Eq("_id", id.ToString())).FirstOrDefaultAsync();
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()

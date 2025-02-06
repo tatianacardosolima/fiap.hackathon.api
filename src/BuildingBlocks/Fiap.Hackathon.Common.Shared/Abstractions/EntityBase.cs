@@ -1,12 +1,16 @@
 ﻿using Fiap.Hackathon.Common.Shared.Interfaces;
 using Fiap.Hackathon.Common.Shared.Records;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Fiap.Hackathon.Common.Shared.Abstractions
 {
     public abstract class EntityBase: IEntity
     {
-        public Guid Id { get; }
+        [BsonId]
+        [BsonRepresentation(BsonType.String)]
+        public Guid Id { get; private set; }
         public DateTime CreatedAt { get; protected set; }
         public DateTime? ModifiedAt { get; protected set; }
         public bool Active { get; protected set; } = true;
@@ -29,8 +33,7 @@ namespace Fiap.Hackathon.Common.Shared.Abstractions
             Active = false;
             ModifiedAt = DateTime.UtcNow;
         }
-
-        public abstract ResponseBase GetResponse();
+        
 
         [NotMapped]
         protected List<ErrorRecord> _errors = new List<ErrorRecord>();

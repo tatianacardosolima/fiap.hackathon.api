@@ -8,7 +8,7 @@ namespace Fiap.Hackathon.Common.Shared.Abstractions
     public class ServiceBase <TEntity, TRequest,TResponse> 
         where TEntity : EntityBase
         where TRequest : IRequest
-        where TResponse: ResponseBase
+        where TResponse: ResponseBase<TEntity>, new()
 
     {
         protected readonly IBaseRepository<TEntity> _repository;
@@ -59,8 +59,8 @@ namespace Fiap.Hackathon.Common.Shared.Abstractions
         {
             var entity = await _repository.GetByIdAsync(id);
             NotFoundException.ThrowWhenNullEntity(entity, "Registro não encontrado");
-            TResponse response = (TResponse)entity.GetResponse();
-            return new DefaultResponse(true, "Registro encontrado", response);
+            TResponse response = new();            
+            return new DefaultResponse(true, "Registro encontrado", response.GetResponse(entity));
         }
     }
 }
