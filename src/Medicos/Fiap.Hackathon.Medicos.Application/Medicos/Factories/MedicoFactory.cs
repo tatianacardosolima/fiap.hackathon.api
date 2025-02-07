@@ -29,18 +29,13 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Factories
             }
             else
             { 
-                var medicoExist = await _repository.GetByIdAsync(request.Id);
-                if (medicoExist == null)
-                {
-                    medico = new Medico(request.Nome, request.CPF.RemoveMask(), request.CRM, request.Email, request.Senha, request.Especialidade);
-                }
-                else
-                {
-                    medico = medicoExist;
-                }
+                medico = await _repository.GetByIdAsync(request.Id);
+                DomainException.ThrowWhen(medico == null, "Médico não encontrado");
+                medico!.Change(request.Nome, request.Email, request.Especialidade);
+                
             }
 
-            var validator = new MedicoValidator();
+            var validator = new MedicoValidator(request.Id == Guid.Empty);
             var validation = validator.Validate(medico!);
             if (!validation.IsValid)
             {
@@ -50,14 +45,20 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Factories
 
             if (request.Latitude != null && request.Longitude != null)
             {
-                var address = await _geoLocalizacaoClient.GetLocalizacaoAsync(request.Latitude, request.Longitude);
+                if (request.Latitude != medico.Latitude || request.Longitude != medico.Longitude)
+                {
+                    var address = await _geoLocalizacaoClient.GetLocalizacaoAsync(request.Latitude, request.Longitude);
 
-                DomainException.ThrowWhen(address == null, "Endereço não encontrado");
-                medico!.SetLatitudeAndLongitude(request.Latitude, request.Longitude);                    
+                    DomainException.ThrowWhen(address == null, "Endereço não encontrado");
+                    medico!.SetLatitudeAndLongitude(request.Latitude, request.Longitude);
+                }
             }
-            medico!.HashSenha();
-            medico.HashCPF();
 
+            if (request.Id == Guid.Empty)
+            {
+                medico!.HashSenha();
+                medico.HashCPF();
+            }
             return medico;
         }
     }

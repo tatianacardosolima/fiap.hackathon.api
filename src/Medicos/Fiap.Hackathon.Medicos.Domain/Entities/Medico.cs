@@ -27,6 +27,13 @@ namespace Fiap.Hackathon.Medicos.Domain.Entities
         public string Latitude { get; private set; }
         public string Longitude { get; private set; }
 
+        public void Change(string nome,string email, string especialidade) 
+        {
+            Nome = nome;            
+            Email = email;            
+            Especialidade = especialidade;
+        }
+
         public void SetLatitudeAndLongitude(string latitude, string longitude)
         {
             Latitude = latitude;

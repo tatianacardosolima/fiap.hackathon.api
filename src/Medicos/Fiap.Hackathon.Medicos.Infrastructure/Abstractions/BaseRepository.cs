@@ -37,12 +37,12 @@ namespace Fiap.Hackathon.Medicos.Infrastructure.Abstractions
 
         public async Task UpdateAsync(Guid id, T entity)
         {
-            await _collection.ReplaceOneAsync(Builders<T>.Filter.Eq("_id", id), entity);
+            await _collection.ReplaceOneAsync(Builders<T>.Filter.Eq("_id", id.ToString()), entity);
         }
 
         public async Task DeleteAsync(Guid id)
         {
-            await _collection.DeleteOneAsync(Builders<T>.Filter.Eq("_id", id));
+            await _collection.DeleteOneAsync(Builders<T>.Filter.Eq("_id", id.ToString()));
         }
 
         public async Task<PaginatedResponse<T>> GetPaginatedAsync(int pagina, int tamanhoPagina, FilterDefinition<T>? filtro = null)

@@ -7,7 +7,7 @@ namespace Fiap.Hackathon.Medicos.Application.Validators
    public class MedicoValidator : AbstractValidator<Medico> 
     {
 
-        public MedicoValidator ()
+        public MedicoValidator (bool needValidate)
         {
            RuleFor(x => x.Nome)
                 .NotNull()
@@ -34,24 +34,26 @@ namespace Fiap.Hackathon.Medicos.Application.Validators
                .MaximumLength(90)
                    .WithMessage("O campo Email permite até 90 caracteres.")
                .Must(email=> email.EhEmailValido()).WithMessage("E-mail inválido."); ;
-
-           RuleFor(x => x.Senha)
+            if (needValidate)
+            { 
+                RuleFor(x => x.Senha)
                 .NotNull()
                    .WithMessage("O campo Senha é obrigatório.")
                 .NotEmpty()
                    .WithMessage("O campo Senha é obrigatório.")
                .MaximumLength(128)
                    .WithMessage("O campo Senha permite até 128 caracteres.");
-
-            RuleFor(x => x.CPF)
-                 .NotNull()
-                    .WithMessage("O campo CPF é obrigatório.")
-                 .NotEmpty()
-                    .WithMessage("O campo CPF é obrigatório.")
-                .MaximumLength(11)
-                    .WithMessage("O campo CPF permite até 11 caracteres.")
-                .Must(cpf => cpf.EhCpfValido()).WithMessage("CPF inválido.");
-
+            
+            
+                RuleFor(x => x.CPF)
+                     .NotNull()
+                        .WithMessage("O campo CPF é obrigatório.")
+                     .NotEmpty()
+                        .WithMessage("O campo CPF é obrigatório.")
+                    .MaximumLength(11)
+                        .WithMessage("O campo CPF permite até 11 caracteres.")
+                    .Must(cpf => cpf.EhCpfValido()).WithMessage("CPF inválido.");
+            }
             RuleFor(x => x.Especialidade)
                 .NotNull()
                    .WithMessage("O campo Especialidade é obrigatório.")
