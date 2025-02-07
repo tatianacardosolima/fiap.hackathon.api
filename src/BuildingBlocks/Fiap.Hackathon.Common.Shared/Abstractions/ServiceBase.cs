@@ -2,6 +2,7 @@
 using Fiap.Hackathon.Common.Shared.Interfaces;
 using Fiap.Hackathon.Common.Shared.Responses;
 using Fiap.Hackathon.Common.Shared.Shared.Exceptions;
+using MongoDB.Driver;
 
 namespace Fiap.Hackathon.Common.Shared.Abstractions
 {
@@ -62,5 +63,7 @@ namespace Fiap.Hackathon.Common.Shared.Abstractions
             TResponse response = new();            
             return new DefaultResponse(true, "Registro encontrado", response.GetResponse(entity));
         }
+
+       
     }
 }

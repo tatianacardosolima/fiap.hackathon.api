@@ -9,11 +9,18 @@ namespace Fiap.Hackathon.Medicos.API.Controllers
     [Route("[controller]")]
     public class MedicoController : BaseController<Medico, MedicoRequest>
     {
-                
+        private readonly IMedicoService _medicoService;
+
         public MedicoController(IMedicoService medicoService):base(medicoService) 
-        {            
+        {
+            _medicoService = medicoService;
         }
 
-        
+        [HttpGet(), /*Authorize*/]
+        public async Task<IActionResult> GetPaginationByFilter([FromQuery] int pagina, [FromQuery] int tamanhoPagina)
+        {
+            return Ok(await _medicoService.GetPaginatedAsync(pagina, tamanhoPagina));
+        }
+
     }
 }

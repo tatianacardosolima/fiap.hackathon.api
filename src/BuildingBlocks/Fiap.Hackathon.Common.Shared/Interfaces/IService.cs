@@ -12,5 +12,6 @@ namespace Fiap.Hackathon.Common.Shared.Interfaces
         Task<DefaultResponse> DeleteAsync(Guid uniqueId);
         Task<DefaultResponse> UpdateAsync(TRequest request);
         Task<DefaultResponse> GetByIdAsync(Guid id);
+        
     }
 }
