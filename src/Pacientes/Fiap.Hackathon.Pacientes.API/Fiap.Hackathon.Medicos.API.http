@@ -1,6 +1,0 @@
-@Fiap.Hackathon.Medicos.API_HostAddress = http://localhost:5008
-
-GET {{Fiap.Hackathon.Medicos.API_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
