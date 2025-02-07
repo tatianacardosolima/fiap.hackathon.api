@@ -5,16 +5,25 @@ using Fiap.Hackathon.Medicos.Application.Medicos.Factories;
 using Fiap.Hackathon.Medicos.Domain.Helpers;
 using FluentAssertions;
 using Fiap.Hackathon.Medicos.Domain.Extensions;
+using Fiap.Hackathon.Medicos.Application.Abstractions.GeoLocalizacao.IClients;
+using Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.IRepositories;
+using Moq;
 
 namespace Fiap.Hackathon.Medicos.Tests.Factories
 {
     public class MedicoFactoryTests
     {
+        private readonly Mock<IGeoLocalizacaoClient> _geoLocalizacaoClientMock;
+        private readonly Mock<IMedicoRepository> _repositoryMock;
         private readonly IMedicoFactory _medicoFactory;
 
         public MedicoFactoryTests()
         {
-            _medicoFactory = new MedicoFactory();
+            _geoLocalizacaoClientMock = new Mock<IGeoLocalizacaoClient>();
+            _repositoryMock = new Mock<IMedicoRepository>();
+
+            _medicoFactory = new MedicoFactory(_geoLocalizacaoClientMock.Object, _repositoryMock.Object);
+
         }
 
         [Fact]
@@ -35,11 +44,11 @@ namespace Fiap.Hackathon.Medicos.Tests.Factories
             var medico = await _medicoFactory.CreateAsync(request);
 
             
-            var isTheSameHash = PasswordHelper.VerifyPassword(request.CPF.RemoveMask(), medico.CPF);
+            var theSameHash = HashHelper.GerarHash(request.CPF.RemoveMask());
             // Assert
             medico.Should().NotBeNull();
             medico.Nome.Should().Be(request.Nome);
-            isTheSameHash.Should().Be(true);
+            medico.CPF.Should().Be(theSameHash);
             medico.CRM.Should().Be(request.CRM);
             medico.Email.Should().Be(request.Email);
             medico.Especialidade.Should().Be(request.Especialidade);

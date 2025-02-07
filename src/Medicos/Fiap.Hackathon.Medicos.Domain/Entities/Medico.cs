@@ -46,7 +46,7 @@ namespace Fiap.Hackathon.Medicos.Domain.Entities
 
         public void HashCPF()
         {
-            CPF = PasswordHelper.HashPassword(CPF);
+            CPF = HashHelper.GerarHash(CPF);
         }
     }
 }

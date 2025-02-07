@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Fiap.Hackathon.Common.Shared.Exceptions;
 using Fiap.Hackathon.Common.Shared.Responses;
+using Fiap.Hackathon.Medicos.Domain.Exceptions;
 
 namespace Fiap.Hackathon.Medicos.API.Filters
 {
@@ -23,8 +24,13 @@ namespace Fiap.Hackathon.Medicos.API.Filters
             {
                 status = 404;
             }
+            else if ((context.Exception is CPFRegisteredException
+                    || context.Exception.InnerException is CPFRegisteredException))
+            {
+                status = 409;
+            }
 
-           var mensagem = status == 400 || status == 404  ? (
+           var mensagem = status == 400 || status == 404 || status == 409  ? (
                             context.Exception.InnerException == null ? context.Exception.Message
                             : context.Exception.InnerException.Message)
                                     : "Ocorreu uma falha inesperada no servidor";
