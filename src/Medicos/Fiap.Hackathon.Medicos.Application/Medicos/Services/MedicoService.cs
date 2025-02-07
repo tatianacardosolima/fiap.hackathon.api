@@ -19,7 +19,7 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Services
            int pagina, int tamanhoPagina)
         {
             var filtro = Builders<Medico>.Filter.Empty; // Pode adicionar um filtro se necessário
-            var resultadoEntity = await _repository.GetPaginatedAsync(pagina: 1, tamanhoPagina: 10, filtro);
+            var resultadoEntity = await _repository.GetPaginatedAsync(pagina, tamanhoPagina, filtro);
             PaginatedResponse<MedicoResponse> resultado = new()
             {
                 PaginaAtual = resultadoEntity.PaginaAtual,
