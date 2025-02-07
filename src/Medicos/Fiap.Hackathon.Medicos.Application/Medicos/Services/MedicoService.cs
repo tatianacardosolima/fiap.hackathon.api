@@ -31,8 +31,7 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Services
                     CPF = x.CPF,
                     CRM = x.CRM,
                     Especialidade = x.Especialidade,
-                    Nome = x.Nome,
-                    Sobrenome = x.Sobrenome,
+                    Nome = x.Nome,                    
                     Id = x.Id
                 }).ToList()
             };

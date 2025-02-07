@@ -8,7 +8,7 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Factories
     {
         public Task<Medico> CreateAsync(MedicoRequest request)
         {
-            var medico = new Medico(request.Nome, request.Sobrenome, request.CPF, request.CRM, request.Email, request.Senha, request.Especialidade);
+            var medico = new Medico(request.Nome, request.CPF, request.CRM, request.Email, request.Senha, request.Especialidade);
             return Task.FromResult(medico);
         }
     }

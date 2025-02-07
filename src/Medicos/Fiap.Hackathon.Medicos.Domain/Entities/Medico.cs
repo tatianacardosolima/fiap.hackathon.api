@@ -4,10 +4,9 @@ namespace Fiap.Hackathon.Medicos.Domain.Entities
 {
     public class Medico : EntityBase
     {
-        public Medico(string nome, string sobrenome,string cpf, string crm, string email, string senha, string especialidade):base()
+        public Medico(string nome, string cpf, string crm, string email, string senha, string especialidade):base()
         {
-            Nome = nome;
-            Sobrenome = sobrenome;
+            Nome = nome;            
             CPF =  cpf;
             CRM = crm;
             Email = email;
@@ -15,8 +14,7 @@ namespace Fiap.Hackathon.Medicos.Domain.Entities
             Especialidade = especialidade;
         }
         
-        public string Nome { get; private set; } = string.Empty;
-        public string Sobrenome { get; private set; } = string.Empty;
+        public string Nome { get; private set; } = string.Empty;        
         public string CPF { get; private set; } = string.Empty;
         public string CRM { get; private set; } = string.Empty;
         public string Email { get; private set; } = string.Empty;
