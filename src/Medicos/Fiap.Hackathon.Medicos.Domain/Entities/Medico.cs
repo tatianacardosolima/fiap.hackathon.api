@@ -24,6 +24,14 @@ namespace Fiap.Hackathon.Medicos.Domain.Entities
         public string Senha { get; private set; } = string.Empty;
         public string Especialidade { get; private set; } = string.Empty;
 
+        public string Latitude { get; private set; }
+        public string Longitude { get; private set; }
+
+        public void SetLatitudeAndLongitude(string latitude, string longitude)
+        {
+            Latitude = latitude;
+            Longitude = longitude;
+        }
         public void HashSenha()
         { 
             Senha = PasswordHelper.HashPassword(Senha);

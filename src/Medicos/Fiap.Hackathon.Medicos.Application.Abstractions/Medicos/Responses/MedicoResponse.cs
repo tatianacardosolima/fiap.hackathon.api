@@ -1,5 +1,4 @@
 ﻿using Fiap.Hackathon.Common.Shared.Abstractions;
-using Fiap.Hackathon.Common.Shared.Interfaces;
 using Fiap.Hackathon.Medicos.Domain.Entities;
 
 namespace Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.Responses
@@ -8,19 +7,23 @@ namespace Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.Responses
     {
         public Guid Id { get; set; }
         public string Nome { get; set; } = string.Empty;        
-        public string CPF { get; set; } = string.Empty;
+        //public string CPF { get; set; } = string.Empty;
         public string CRM { get; set; } = string.Empty;
         public string Especialidade { get; set; } = string.Empty;
+        public string? Latitude { get; set; }
+        public string? Longitude { get; set; }
+        public double? DistanciaKm { get; set; }
 
         public override MedicoResponse GetResponse(Medico entity)
         {
             return new MedicoResponse()
             {
                 Id = entity.Id,
-                Nome = entity.Nome,                
-                CPF = entity.CPF,
+                Nome = entity.Nome,                                
                 CRM = entity.CRM,
-                Especialidade = entity.Especialidade
+                Especialidade = entity.Especialidade,
+                Latitude = entity.Latitude,
+                Longitude = entity.Longitude
             };
 
         }

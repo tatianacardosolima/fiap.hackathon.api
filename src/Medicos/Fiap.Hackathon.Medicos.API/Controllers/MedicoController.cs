@@ -18,9 +18,10 @@ namespace Fiap.Hackathon.Medicos.API.Controllers
 
         [HttpGet(), /*Authorize*/]
         public async Task<IActionResult> GetPaginationByFilter(
-            [FromQuery] int pagina, [FromQuery] int tamanhoPagina, [FromQuery]string especialidade)
+            [FromQuery] int pagina, [FromQuery] int tamanhoPagina, [FromQuery]string especialidade,
+            [FromQuery] string? latitude, [FromQuery] string? longitude)
         {
-            return Ok(await _medicoService.GetPaginatedAsync(pagina, tamanhoPagina, especialidade));
+            return Ok(await _medicoService.GetPaginatedAsync(pagina, tamanhoPagina, especialidade, latitude, longitude));
         }
 
     }
