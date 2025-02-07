@@ -1144,3 +1144,16 @@ Fiap.Hackathon.Common.Shared.Exceptions.NotFoundException: Registro não encontr
 2025-02-07 19:09:55.144 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 125.8811ms
 2025-02-07 19:09:55.224 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null
 2025-02-07 19:09:55.465 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 241.4321ms
+2025-02-07 19:46:10.530 -03:00 [INF] Now listening on: https://localhost:7144
+2025-02-07 19:46:13.129 -03:00 [INF] Now listening on: http://localhost:5008
+2025-02-07 19:46:13.167 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/index.html - null null
+2025-02-07 19:46:13.221 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 19:46:13.265 -03:00 [INF] Hosting environment: Development
+2025-02-07 19:46:13.335 -03:00 [INF] Content root path: C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.API
+2025-02-07 19:46:14.547 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/index.html - 200 null text/html;charset=utf-8 1492.0206ms
+2025-02-07 19:46:14.609 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 19:46:14.615 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2025-02-07 19:46:14.659 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 50.079ms
+2025-02-07 19:46:14.810 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 194.503ms
+2025-02-07 19:46:14.982 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null
+2025-02-07 19:46:15.386 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 404.4288ms

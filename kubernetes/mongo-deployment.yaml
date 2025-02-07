@@ -110,14 +110,10 @@ metadata:
   labels:
     app: mongo-db
 spec:
-  type: NodePort
+  type: ClusterIP  # Permite que outros serviÃ§os dentro do cluster se conectem ao MongoDB
   ports:
     - name: db-port
       port: 27017
       targetPort: 27017
-      nodePort: 32017  # Porta exposta no nó
-    - name: exporter-port
-      port: 9216
-      targetPort: 9216
   selector:
     app: mongo-db
