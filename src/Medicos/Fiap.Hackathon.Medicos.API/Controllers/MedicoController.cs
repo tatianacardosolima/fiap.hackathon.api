@@ -24,5 +24,12 @@ namespace Fiap.Hackathon.Medicos.API.Controllers
             return Ok(await _medicoService.GetPaginatedAsync(pagina, tamanhoPagina, especialidade, latitude, longitude));
         }
 
+        [HttpGet("validar/"), /*Authorize*/]
+        public async Task<IActionResult> GetByUsuarioAndSenha(            
+            [FromQuery] string user, [FromQuery] string senha)
+        {
+            return Ok(await _medicoService.GetByUsuarioAndSenha(user, senha));
+        }
+
     }
 }

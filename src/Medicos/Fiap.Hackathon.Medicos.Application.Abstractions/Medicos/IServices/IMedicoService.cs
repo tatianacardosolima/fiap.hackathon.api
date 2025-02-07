@@ -10,5 +10,7 @@ namespace Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.IServices
     {
         Task<PaginatedResponse<MedicoResponse>> GetPaginatedAsync(
            int pagina, int tamanhoPagina, string especialidade, string? latitude, string? longitude);
+
+        Task<MedicoResponse> GetByUsuarioAndSenha(string usuario, string senha);
     }
 }

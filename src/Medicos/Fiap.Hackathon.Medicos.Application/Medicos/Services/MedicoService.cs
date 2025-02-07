@@ -1,5 +1,6 @@
 ﻿using Fiap.Hackathon.Common.Shared.Abstractions;
 using Fiap.Hackathon.Common.Shared.Interfaces;
+using Fiap.Hackathon.Common.Shared.Shared.Exceptions;
 using Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.IFactories;
 using Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.IRepositories;
 using Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.IServices;
@@ -16,6 +17,24 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Services
         public MedicoService(IMedicoRepository repository, IMedicoFactory factory) : base(repository, factory)
         {
         }
+
+        public async Task<MedicoResponse> GetByUsuarioAndSenha(string usuario, string senha)
+        {
+            var usuarioHash = PasswordHelper.HashPassword(usuario);
+            var entity = await _repository.FindAsync(x => x.CPF == usuarioHash || x.CRM == usuario);
+            DomainException.ThrowWhen(entity == null && entity!.Count() ==0, "Usuário não encontrado");
+            
+            DomainException.ThrowWhen(!PasswordHelper.VerifyPassword(senha, entity!.FirstOrDefault()!.Senha), "Usuário não encontrado");
+
+            return new MedicoResponse
+            {
+                CRM = entity!.FirstOrDefault()!.CRM,
+                Nome = entity!.FirstOrDefault()!.Nome,
+                Id = entity!.FirstOrDefault()!.Id
+            };
+
+        }
+
         public virtual async Task<PaginatedResponse<MedicoResponse>> GetPaginatedAsync(
            int pagina, int tamanhoPagina, string especialidade, string? latitude, string? longitude)
         {
