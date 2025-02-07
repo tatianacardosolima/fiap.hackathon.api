@@ -9,6 +9,6 @@ namespace Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.IServices
     public interface IMedicoService : IService<Medico,  MedicoRequest>
     {
         Task<PaginatedResponse<MedicoResponse>> GetPaginatedAsync(
-           int pagina, int tamanhoPagina);
+           int pagina, int tamanhoPagina, string especialidade);
     }
 }

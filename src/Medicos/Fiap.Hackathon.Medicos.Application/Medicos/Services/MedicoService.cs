@@ -16,9 +16,15 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Services
         {
         }
         public virtual async Task<PaginatedResponse<MedicoResponse>> GetPaginatedAsync(
-           int pagina, int tamanhoPagina)
+           int pagina, int tamanhoPagina, string especialidade)
         {
-            var filtro = Builders<Medico>.Filter.Empty; // Pode adicionar um filtro se necessário
+            var filtro = Builders<Medico>.Filter.Empty; // Sem filtro retorna tudo
+
+            // Exemplo: Filtrar médicos por especialidade
+            if (!string.IsNullOrEmpty(especialidade))
+            {
+                filtro &= Builders<Medico>.Filter.Eq(m => m.Especialidade, especialidade);
+            }
             var resultadoEntity = await _repository.GetPaginatedAsync(pagina, tamanhoPagina, filtro);
             PaginatedResponse<MedicoResponse> resultado = new()
             {
