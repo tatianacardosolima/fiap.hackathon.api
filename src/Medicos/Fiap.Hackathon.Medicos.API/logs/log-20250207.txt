@@ -1118,3 +1118,29 @@ Fiap.Hackathon.Common.Shared.Exceptions.NotFoundException: Registro não encontr
 2025-02-07 18:13:29.304 -03:00 [INF] Executed action Fiap.Hackathon.Medicos.API.Controllers.MedicoController.GetByIdAsync (Fiap.Hackathon.Medicos.API) in 4954.8663ms
 2025-02-07 18:13:29.355 -03:00 [INF] Executed endpoint 'Fiap.Hackathon.Medicos.API.Controllers.MedicoController.GetByIdAsync (Fiap.Hackathon.Medicos.API)'
 2025-02-07 18:13:29.382 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/Medico/97259323-da00-4839-83bd-bf392fffdeb1 - 200 null application/json; charset=utf-8 7738.5347ms
+2025-02-07 19:08:01.127 -03:00 [INF] Now listening on: https://localhost:7144
+2025-02-07 19:08:01.228 -03:00 [INF] Now listening on: http://localhost:5008
+2025-02-07 19:08:01.247 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 19:08:01.263 -03:00 [INF] Hosting environment: Development
+2025-02-07 19:08:01.273 -03:00 [INF] Content root path: C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.API
+2025-02-07 19:08:02.455 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/index.html - null null
+2025-02-07 19:08:03.493 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/index.html - 200 null text/html;charset=utf-8 1057.7168ms
+2025-02-07 19:08:03.539 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2025-02-07 19:08:03.539 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 19:08:03.620 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 82.9488ms
+2025-02-07 19:08:03.902 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 363.9967ms
+2025-02-07 19:08:04.631 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null
+2025-02-07 19:08:04.948 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 318.1679ms
+2025-02-07 19:09:53.599 -03:00 [INF] Now listening on: https://localhost:7144
+2025-02-07 19:09:53.753 -03:00 [INF] Now listening on: http://localhost:5008
+2025-02-07 19:09:53.776 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 19:09:53.786 -03:00 [INF] Hosting environment: Development
+2025-02-07 19:09:53.818 -03:00 [INF] Content root path: C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.API
+2025-02-07 19:09:54.321 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/index.html - null null
+2025-02-07 19:09:54.981 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/index.html - 200 null text/html;charset=utf-8 685.6864ms
+2025-02-07 19:09:55.019 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 19:09:55.019 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2025-02-07 19:09:55.063 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 44.7341ms
+2025-02-07 19:09:55.144 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 125.8811ms
+2025-02-07 19:09:55.224 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null
+2025-02-07 19:09:55.465 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 241.4321ms
