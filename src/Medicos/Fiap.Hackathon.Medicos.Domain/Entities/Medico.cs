@@ -7,14 +7,14 @@ namespace Fiap.Hackathon.Medicos.Domain.Entities
 {
     public class Medico : EntityBase
     {
-        public Medico(string nome, string cpf, string crm, string email, string senha, string especialidade):base()
+        public Medico(string nome, string cpf, string crm, string email, string senha, List<string> especialidades):base()
         {
             Nome = nome;            
             CPF =  cpf;
             CRM = crm;
             Email = email;
             Senha = senha;
-            Especialidade = especialidade;
+            Especialidades = especialidades;
         }
         
         public string Nome { get; private set; } = string.Empty;        
@@ -22,16 +22,16 @@ namespace Fiap.Hackathon.Medicos.Domain.Entities
         public string CRM { get; private set; } = string.Empty;
         public string Email { get; private set; } = string.Empty;
         public string Senha { get; private set; } = string.Empty;
-        public string Especialidade { get; private set; } = string.Empty;
+        public List<string> Especialidades { get; private set; } = default!;
 
-        public string Latitude { get; private set; }
-        public string Longitude { get; private set; }
+        public string? Latitude { get; private set; }
+        public string? Longitude { get; private set; }
 
-        public void Change(string nome,string email, string especialidade) 
+        public void Change(string nome,string email, List<string> especialidades) 
         {
             Nome = nome;            
             Email = email;            
-            Especialidade = especialidade;
+            Especialidades = especialidades;
         }
 
         public void SetLatitudeAndLongitude(string latitude, string longitude)

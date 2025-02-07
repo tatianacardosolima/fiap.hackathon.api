@@ -11,7 +11,7 @@ namespace Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.Requests
         public string Email { get; set; } = string.Empty;
 
         public string Senha { get; set; } = string.Empty;
-        public string Especialidade { get; set; } = string.Empty;
+        public List<string> Especialidades { get; set; } = default!;
         public string? Latitude { get; set; }
         public string? Longitude { get;set; }
     }

@@ -43,7 +43,7 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Services
             // Exemplo: Filtrar médicos por especialidade
             if (!string.IsNullOrEmpty(especialidade))
             {
-                filtro &= Builders<Medico>.Filter.Eq(m => m.Especialidade, especialidade);
+                filtro &= Builders<Medico>.Filter.Where(m => m.Especialidades.Contains(especialidade));
             }
             
 
@@ -62,7 +62,7 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Services
                     Dados = resultadoEntity.Dados.Select(x => new MedicoResponse()
                     {
                         CRM = x.CRM,
-                        Especialidade = x.Especialidade,
+                        Especialidades = x.Especialidades,
                         Nome = x.Nome,
                         Latitude = x.Latitude,
                         Longitude = x.Longitude,
@@ -74,13 +74,13 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Services
             }
             else
             {
-                var resultadoEntity = await _repository.FindAsync(x => x.Especialidade == especialidade && x.Latitude != null);
+                var resultadoEntity = await _repository.FindAsync(x => x.Especialidades.Contains(especialidade) && x.Latitude != null);
 
                 var dadosOrdenados = resultadoEntity
                           .Select(x => new MedicoResponse()
                           {
                               CRM = x.CRM,
-                              Especialidade = x.Especialidade,
+                              Especialidades = x.Especialidades,
                               Nome = x.Nome,
                               Id = x.Id,
                               Latitude = x.Latitude,

@@ -54,13 +54,9 @@ namespace Fiap.Hackathon.Medicos.Application.Validators
                         .WithMessage("O campo CPF permite até 11 caracteres.")
                     .Must(cpf => cpf.EhCpfValido()).WithMessage("CPF inválido.");
             }
-            RuleFor(x => x.Especialidade)
-                .NotNull()
-                   .WithMessage("O campo Especialidade é obrigatório.")
-                .NotEmpty()
-                   .WithMessage("O campo Especialidade é obrigatório.")
-               .MaximumLength(100)
-                   .WithMessage("O campo Especialidade permite até 100 caracteres.");
+            RuleFor(x => x.Especialidades)
+                .Must(espec=> espec.Count > 0).WithMessage("Deve haver pelo menos um especialidade.");
+                
 
 
         }

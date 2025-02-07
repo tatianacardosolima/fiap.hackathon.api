@@ -9,7 +9,7 @@ namespace Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.Responses
         public string Nome { get; set; } = string.Empty;        
         //public string CPF { get; set; } = string.Empty;
         public string CRM { get; set; } = string.Empty;
-        public string Especialidade { get; set; } = string.Empty;
+        public List<string> Especialidades { get; set; } = default!;
         public string? Latitude { get; set; }
         public string? Longitude { get; set; }
         public double? DistanciaKm { get; set; }
@@ -21,7 +21,7 @@ namespace Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.Responses
                 Id = entity.Id,
                 Nome = entity.Nome,                                
                 CRM = entity.CRM,
-                Especialidade = entity.Especialidade,
+                Especialidades = entity.Especialidades,
                 Latitude = entity.Latitude,
                 Longitude = entity.Longitude
             };

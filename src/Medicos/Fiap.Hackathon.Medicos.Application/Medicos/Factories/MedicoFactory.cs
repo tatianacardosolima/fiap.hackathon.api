@@ -32,13 +32,14 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Factories
                 medicoExist = await _repository.FindAsync(x => x.CPF == cpfHash);
                 CPFRegisteredException.ThrowWhenCPF(medicoExist.Count() > 0, "CPF já cadastrado");
 
-                medico = new Medico(request.Nome, request.CPF.RemoveMask(), request.CRM, request.Email, request.Senha, request.Especialidade);
+                medico = new Medico(request.Nome, request.CPF.RemoveMask(), request.CRM, request.Email, 
+                                    request.Senha, request.Especialidades);
             }
             else
             { 
                 medico = await _repository.GetByIdAsync(request.Id);
                 DomainException.ThrowWhen(medico == null, "Médico não encontrado");
-                medico!.Change(request.Nome, request.Email, request.Especialidade);
+                medico!.Change(request.Nome, request.Email, request.Especialidades);
                 
             }
 

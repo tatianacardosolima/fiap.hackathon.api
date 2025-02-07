@@ -37,7 +37,7 @@ namespace Fiap.Hackathon.Medicos.Tests.Factories
                 CRM = "123456/SP",
                 Email = "joao@email.com",
                 Senha = "Senha@123",
-                Especialidade = "Cardio"
+                Especialidades = new List<string>() { "cardio" }
             };
 
             // Act
@@ -51,7 +51,7 @@ namespace Fiap.Hackathon.Medicos.Tests.Factories
             medico.CPF.Should().Be(theSameHash);
             medico.CRM.Should().Be(request.CRM);
             medico.Email.Should().Be(request.Email);
-            medico.Especialidade.Should().Be(request.Especialidade);
+            medico.Especialidades.Should().BeEquivalentTo(request.Especialidades);
         }
 
         [Fact]
@@ -65,7 +65,7 @@ namespace Fiap.Hackathon.Medicos.Tests.Factories
                 CRM = "123456/SP",
                 Email = "joao@email.com",
                 Senha = "Senha@123",
-                Especialidade = "Cardio"
+                Especialidades = new List<string> { "Cardio" }
             };
 
             // Act
@@ -87,7 +87,7 @@ namespace Fiap.Hackathon.Medicos.Tests.Factories
                 CRM = "12/SP", // CRM inválido
                 Email = "joao@email.com",
                 Senha = "Senha@123",
-                Especialidade = "Cardio"
+                Especialidades = new List<string> { "Cardio" }
             };
 
             // Act
@@ -109,7 +109,7 @@ namespace Fiap.Hackathon.Medicos.Tests.Factories
                 CRM = "123456/SP",
                 Email = "", // Email vazio
                 Senha = "Senha@123",
-                Especialidade = "Cardio"
+                Especialidades = new List<string> { "Cardio" }
             };
 
             // Act
