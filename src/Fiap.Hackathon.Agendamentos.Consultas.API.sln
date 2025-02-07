@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildBlocks", "BuildBlocks"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.Hackathon.Common.Shared", "BuildingBlocks\Fiap.Hackathon.Common.Shared\Fiap.Hackathon.Common.Shared.csproj", "{F06FFDBA-3E2F-45B1-8486-BE609AE47CA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.Hackathon.Medicos.Tests", "Medicos\Fiap.Hackathon.Medicos.Tests\Fiap.Hackathon.Medicos.Tests.csproj", "{E096F1E8-6DDF-491B-8591-9541030BC013}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{F06FFDBA-3E2F-45B1-8486-BE609AE47CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F06FFDBA-3E2F-45B1-8486-BE609AE47CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F06FFDBA-3E2F-45B1-8486-BE609AE47CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E096F1E8-6DDF-491B-8591-9541030BC013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E096F1E8-6DDF-491B-8591-9541030BC013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E096F1E8-6DDF-491B-8591-9541030BC013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E096F1E8-6DDF-491B-8591-9541030BC013}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{5314DA7A-A31B-4185-8BF7-5BCD8DB1F115} = {A44AFF9A-E1F4-487A-92BB-341925D701B7}
 		{7941CF31-67EF-478C-BE63-5F832A3CA6A7} = {A44AFF9A-E1F4-487A-92BB-341925D701B7}
 		{F06FFDBA-3E2F-45B1-8486-BE609AE47CA3} = {BE7B321D-2DDA-4231-927F-36D71E96AB40}
+		{E096F1E8-6DDF-491B-8591-9541030BC013} = {A44AFF9A-E1F4-487A-92BB-341925D701B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7EA57CB-F911-412C-B382-04D782CA07FE}

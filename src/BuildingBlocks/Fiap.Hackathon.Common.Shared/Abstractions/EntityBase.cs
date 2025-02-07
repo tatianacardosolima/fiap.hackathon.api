@@ -39,6 +39,5 @@ namespace Fiap.Hackathon.Common.Shared.Abstractions
         protected List<ErrorRecord> _errors = new List<ErrorRecord>();
         [NotMapped]
         public IReadOnlyCollection<ErrorRecord> Errors => _errors;
-        public abstract bool Validate();
     }
 }

@@ -1,4 +1,7 @@
 ﻿using Fiap.Hackathon.Common.Shared.Abstractions;
+using Fiap.Hackathon.Common.Shared.Shared.Exceptions;
+using Fiap.Hackathon.Medicos.Domain.Helpers;
+
 
 namespace Fiap.Hackathon.Medicos.Domain.Entities
 {
@@ -21,10 +24,14 @@ namespace Fiap.Hackathon.Medicos.Domain.Entities
         public string Senha { get; private set; } = string.Empty;
         public string Especialidade { get; private set; } = string.Empty;
 
-        
-        public override bool Validate()
+        public void HashSenha()
+        { 
+            Senha = PasswordHelper.HashPassword(Senha);
+        }
+
+        public void HashCPF()
         {
-            throw new NotImplementedException();
+            CPF = PasswordHelper.HashPassword(CPF);
         }
     }
 }
