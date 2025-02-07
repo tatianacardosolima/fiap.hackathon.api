@@ -32,7 +32,8 @@ namespace Fiap.Hackathon.Medicos.Application.Validators
                 .NotEmpty()
                    .WithMessage("O campo Email é obrigatório.")
                .MaximumLength(90)
-                   .WithMessage("O campo Email permite até 90 caracteres.");
+                   .WithMessage("O campo Email permite até 90 caracteres.")
+               .Must(email=> email.EhEmailValido()).WithMessage("E-mail inválido."); ;
 
            RuleFor(x => x.Senha)
                 .NotNull()
@@ -56,8 +57,8 @@ namespace Fiap.Hackathon.Medicos.Application.Validators
                    .WithMessage("O campo Especialidade é obrigatório.")
                 .NotEmpty()
                    .WithMessage("O campo Especialidade é obrigatório.")
-               .MaximumLength(10)
-                   .WithMessage("O campo Especialidade permite até 10 caracteres.");
+               .MaximumLength(100)
+                   .WithMessage("O campo Especialidade permite até 100 caracteres.");
 
 
         }

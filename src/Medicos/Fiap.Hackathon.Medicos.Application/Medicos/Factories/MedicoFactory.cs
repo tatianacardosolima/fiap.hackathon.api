@@ -20,6 +20,8 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Factories
                 var error = validation.Errors.ToList().First();
                 throw new DomainException(error.ErrorMessage);
             }
+            medico.HashSenha();
+            medico.HashCPF();
 
             return Task.FromResult(medico);
         }

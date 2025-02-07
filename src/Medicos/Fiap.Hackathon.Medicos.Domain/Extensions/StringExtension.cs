@@ -4,6 +4,14 @@ namespace Fiap.Hackathon.Medicos.Domain.Extensions
 {
     public static class StringExtension
     {
+        private static readonly Regex EmailRegex = new Regex(
+           @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
+           RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+        public static bool EhEmailValido(this string email)
+        {
+            return !string.IsNullOrWhiteSpace(email) && EmailRegex.IsMatch(email);
+        }
         public static string RemoveMask(this string cpfFormatado)
         {
             if (string.IsNullOrWhiteSpace(cpfFormatado))
