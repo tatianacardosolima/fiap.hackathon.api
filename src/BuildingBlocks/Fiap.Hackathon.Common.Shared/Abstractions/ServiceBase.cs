@@ -51,8 +51,7 @@ namespace Fiap.Hackathon.Common.Shared.Abstractions
             DomainException.ThrowWhen(entity == null, "Registro não encontrado");
             
             await _repository.DeleteAsync(id);
-            
-            
+                        
             return new DefaultResponse(true, "Registro excluído");
         }
 

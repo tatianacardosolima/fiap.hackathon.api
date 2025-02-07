@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildBlocks", "BuildBlocks"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.Hackathon.Common.Shared", "BuildingBlocks\Fiap.Hackathon.Common.Shared\Fiap.Hackathon.Common.Shared.csproj", "{F06FFDBA-3E2F-45B1-8486-BE609AE47CA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.Hackathon.Medicos.Tests", "Medicos\Fiap.Hackathon.Medicos.Tests\Fiap.Hackathon.Medicos.Tests.csproj", "{E096F1E8-6DDF-491B-8591-9541030BC013}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.Hackathon.Medicos.Tests", "Medicos\Fiap.Hackathon.Medicos.Tests\Fiap.Hackathon.Medicos.Tests.csproj", "{E096F1E8-6DDF-491B-8591-9541030BC013}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

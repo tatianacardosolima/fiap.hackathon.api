@@ -1,3 +1,4 @@
+using Fiap.Hackathon.Medicos.API.Filters;
 using Fiap.Hackathon.Medicos.API.Setup;
 using Fiap.Hackathon.Medicos.Application.Abstractions.GeoLocalizacao.IClients;
 using Fiap.Hackathon.Medicos.Application.GeoLocalizacao.Clients;
@@ -7,7 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<ExceptionFilter>(); // Adiciona o filtro globalmente
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
