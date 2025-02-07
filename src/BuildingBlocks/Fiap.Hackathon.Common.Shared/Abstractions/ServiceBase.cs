@@ -2,7 +2,6 @@
 using Fiap.Hackathon.Common.Shared.Interfaces;
 using Fiap.Hackathon.Common.Shared.Responses;
 using Fiap.Hackathon.Common.Shared.Shared.Exceptions;
-using MongoDB.Driver;
 
 namespace Fiap.Hackathon.Common.Shared.Abstractions
 {
