@@ -69,7 +69,7 @@ app.UseCors("AllowAllOrigins");
 app.UseSwagger();
 app.UseSwaggerUI();
 
-//app.UseMiddleware<TokenValidationMiddleware>();
+app.UseMiddleware<TokenValidationMiddleware>();
 
 //app.UseHttpsRedirection();
 

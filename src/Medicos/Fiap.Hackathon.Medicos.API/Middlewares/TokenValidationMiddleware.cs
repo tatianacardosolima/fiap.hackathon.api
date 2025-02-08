@@ -15,8 +15,9 @@ namespace Fiap.Hackathon.Medicos.API.Middlewares
 
         public async Task Invoke(HttpContext context)
         {
-            if (context.Request.Path.StartsWithSegments("/api/protegida")) // Ajuste conforme necessário
+            if (context.Request.Method != "POST") 
             {
+
                 var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Replace("Bearer ", "");
 
                 if (string.IsNullOrEmpty(token))
@@ -41,9 +42,9 @@ namespace Fiap.Hackathon.Medicos.API.Middlewares
 
         private async Task<bool> ValidarToken(string token)
         {
-            var urlValidacao = "https://sua-api.com/validacoes-tokens"; // Ajuste a URL correta
+            var urlValidacao = "http://localhost:5010/v1/autenticacao/validacoes-tokens"; // Ajuste a URL correta
 
-            var response = await _httpClient.PostAsJsonAsync(urlValidacao, new { Token = token });
+            var response = await _httpClient.PostAsJsonAsync(urlValidacao, new { token = token });
 
             if (!response.IsSuccessStatusCode)
                 return false;
