@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Fiap.Hackathon.Medicos.API.Controllers
 {
     [ApiController]
-    [Route("medicos")]
+    [Route("v1/medicos")]
     public class MedicoController : BaseController<Medico, MedicoRequest>
     {
         private readonly IMedicoService _medicoService;

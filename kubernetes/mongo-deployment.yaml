@@ -83,7 +83,7 @@ spec:
         - name: container-mongo-db-exporter
           image: bitnami/mongodb-exporter:latest
           args:
-            - "--mongodb.uri=mongodb://$(MONGO_INITDB_ROOT_USERNAME):$(MONGO_INITDB_ROOT_PASSWORD)@service-mongo-db:27017"
+            - "--mongodb.uri=mongodb://$(MONGO_INITDB_ROOT_USERNAME):$(MONGO_INITDB_ROOT_PASSWORD)@localhost:27017"
           ports:
             - name: "exporter-port"
               containerPort: 9216
@@ -110,10 +110,11 @@ metadata:
   labels:
     app: mongo-db
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
     - name: db-port
-      port: 27017
+      port: 27018
       targetPort: 27017
+      nodePort: 31002
   selector:
     app: mongo-db

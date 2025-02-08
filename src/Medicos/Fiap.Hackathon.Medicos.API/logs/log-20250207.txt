@@ -1157,3 +1157,146 @@ Fiap.Hackathon.Common.Shared.Exceptions.NotFoundException: Registro não encontr
 2025-02-07 19:46:14.810 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 194.503ms
 2025-02-07 19:46:14.982 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null
 2025-02-07 19:46:15.386 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 404.4288ms
+2025-02-07 21:27:34.515 -03:00 [INF] Now listening on: https://localhost:7144
+2025-02-07 21:27:34.799 -03:00 [INF] Now listening on: http://localhost:5008
+2025-02-07 21:27:34.836 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 21:27:35.252 -03:00 [INF] Hosting environment: Development
+2025-02-07 21:27:35.319 -03:00 [INF] Content root path: C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.API
+2025-02-07 21:27:35.959 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/index.html - null null
+2025-02-07 21:27:37.464 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/index.html - 200 null text/html;charset=utf-8 1575.5648ms
+2025-02-07 21:27:37.854 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 21:27:37.874 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2025-02-07 21:27:37.984 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 129.9167ms
+2025-02-07 21:27:38.678 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 804.3446ms
+2025-02-07 21:27:39.291 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null
+2025-02-07 21:27:39.983 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 693.6648ms
+2025-02-07 22:56:53.678 -03:00 [INF] Now listening on: https://localhost:7144
+2025-02-07 22:56:54.593 -03:00 [INF] Now listening on: http://localhost:5008
+2025-02-07 22:56:54.647 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 22:56:54.678 -03:00 [INF] Hosting environment: Development
+2025-02-07 22:56:54.705 -03:00 [INF] Content root path: C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.API
+2025-02-07 22:56:54.881 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/index.html - null null
+2025-02-07 22:56:56.482 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/index.html - 200 null text/html;charset=utf-8 1636.8758ms
+2025-02-07 22:56:56.551 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 22:56:56.566 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2025-02-07 22:56:56.610 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 58.3168ms
+2025-02-07 22:56:56.848 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 282.2318ms
+2025-02-07 22:56:57.147 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null
+2025-02-07 22:56:57.704 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 558.8696ms
+2025-02-07 22:57:30.677 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7144/medicos - application/json 202
+2025-02-07 22:57:30.707 -03:00 [INF] Executing endpoint 'Fiap.Hackathon.Medicos.API.Controllers.MedicoController.InsertAsync (Fiap.Hackathon.Medicos.API)'
+2025-02-07 22:57:30.780 -03:00 [INF] Route matched with {action = "Insert", controller = "Medico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InsertAsync(Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.Requests.MedicoRequest) on controller Fiap.Hackathon.Medicos.API.Controllers.MedicoController (Fiap.Hackathon.Medicos.API).
+2025-02-07 22:58:06.704 -03:00 [INF] Executed action Fiap.Hackathon.Medicos.API.Controllers.MedicoController.InsertAsync (Fiap.Hackathon.Medicos.API) in 35908.7718ms
+2025-02-07 22:58:06.714 -03:00 [INF] Executed endpoint 'Fiap.Hackathon.Medicos.API.Controllers.MedicoController.InsertAsync (Fiap.Hackathon.Medicos.API)'
+2025-02-07 22:58:06.724 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.TimeoutException: A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/mongo-db-service:31001" }", EndPoint: "Unspecified/mongo-db-service:31001", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Sockets.SocketException (0x00002AF9): Este host não é conhecido.
+   at System.Net.Dns.GetHostEntryOrAddressesCore(String hostName, Boolean justAddresses, AddressFamily addressFamily, Nullable`1 startingTimestamp)
+   at System.Net.Dns.GetHostAddresses(String hostNameOrAddress, AddressFamily family)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.ResolveEndPoints(EndPoint initial)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2025-02-08T01:58:05.6843399Z", LastUpdateTimestamp: "2025-02-08T01:58:05.6843412Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedAsync(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServerAsync(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.IClusterExtensions.SelectServerAndPinIfNeededAsync(IClusterInternal cluster, ICoreSessionHandle session, IServerSelector selector, IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadPreferenceBinding.GetReadChannelSourceAsync(IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.InitializeAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.CreateAsync(IReadBinding binding, Boolean retryRequested, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Fiap.Hackathon.Medicos.Infrastructure.Abstractions.BaseRepository`1.FindAsync(Expression`1 filter) in C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.Infrastructure\Abstractions\BaseRepository.cs:line 30
+   at Fiap.Hackathon.Medicos.Application.Medicos.Factories.MedicoFactory.CreateAsync(MedicoRequest request) in C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.Application\Medicos\Factories\MedicoFactory.cs:line 28
+   at Fiap.Hackathon.Common.Shared.Abstractions.ServiceBase`3.InsertAsync(TRequest request) in C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\BuildingBlocks\Fiap.Hackathon.Common.Shared\Abstractions\ServiceBase.cs:line 27
+   at Fiap.Hackathon.Medicos.API.Controllers.BaseController`2.InsertAsync(TRequest request) in C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.API\Controllers\BaseController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-07 22:58:06.872 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7144/medicos - 500 null text/plain; charset=utf-8 36194.6458ms
+2025-02-07 23:01:26.934 -03:00 [INF] Now listening on: https://localhost:7144
+2025-02-07 23:01:27.267 -03:00 [INF] Now listening on: http://localhost:5008
+2025-02-07 23:01:27.815 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-07 23:01:28.441 -03:00 [INF] Hosting environment: Development
+2025-02-07 23:01:28.489 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/index.html - null null
+2025-02-07 23:01:28.605 -03:00 [INF] Content root path: C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.API
+2025-02-07 23:01:30.485 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/index.html - 200 null text/html;charset=utf-8 2038.3589ms
+2025-02-07 23:01:30.579 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-07 23:01:30.603 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2025-02-07 23:01:30.669 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 89.6725ms
+2025-02-07 23:01:30.947 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 368.0659ms
+2025-02-07 23:01:31.217 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null
+2025-02-07 23:01:32.037 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 822.5649ms
+2025-02-07 23:01:37.297 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7144/medicos - application/json 202
+2025-02-07 23:01:37.351 -03:00 [INF] Executing endpoint 'Fiap.Hackathon.Medicos.API.Controllers.MedicoController.InsertAsync (Fiap.Hackathon.Medicos.API)'
+2025-02-07 23:01:37.509 -03:00 [INF] Route matched with {action = "Insert", controller = "Medico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InsertAsync(Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.Requests.MedicoRequest) on controller Fiap.Hackathon.Medicos.API.Controllers.MedicoController (Fiap.Hackathon.Medicos.API).
+2025-02-07 23:02:09.260 -03:00 [INF] Executed action Fiap.Hackathon.Medicos.API.Controllers.MedicoController.InsertAsync (Fiap.Hackathon.Medicos.API) in 31728.7341ms
+2025-02-07 23:02:09.269 -03:00 [INF] Executed endpoint 'Fiap.Hackathon.Medicos.API.Controllers.MedicoController.InsertAsync (Fiap.Hackathon.Medicos.API)'
+2025-02-07 23:02:09.285 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.TimeoutException: A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "10.97.228.154:31001" }", EndPoint: "10.97.228.154:31001", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Sockets.SocketException (10060): Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu. 10.97.228.154:31001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2025-02-08T02:01:59.2170261Z", LastUpdateTimestamp: "2025-02-08T02:01:59.2170318Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedAsync(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServerAsync(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.IClusterExtensions.SelectServerAndPinIfNeededAsync(IClusterInternal cluster, ICoreSessionHandle session, IServerSelector selector, IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Bindings.ReadPreferenceBinding.GetReadChannelSourceAsync(IReadOnlyCollection`1 deprioritizedServers, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.InitializeAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.RetryableReadContext.CreateAsync(IReadBinding binding, Boolean retryRequested, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.ExecuteAsync(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperationAsync[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperationAsync[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSessionAsync[TResult](Func`2 funcAsync, CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToListAsync[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at Fiap.Hackathon.Medicos.Infrastructure.Abstractions.BaseRepository`1.FindAsync(Expression`1 filter) in C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.Infrastructure\Abstractions\BaseRepository.cs:line 30
+   at Fiap.Hackathon.Medicos.Application.Medicos.Factories.MedicoFactory.CreateAsync(MedicoRequest request) in C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.Application\Medicos\Factories\MedicoFactory.cs:line 28
+   at Fiap.Hackathon.Common.Shared.Abstractions.ServiceBase`3.InsertAsync(TRequest request) in C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\BuildingBlocks\Fiap.Hackathon.Common.Shared\Abstractions\ServiceBase.cs:line 27
+   at Fiap.Hackathon.Medicos.API.Controllers.BaseController`2.InsertAsync(TRequest request) in C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.API\Controllers\BaseController.cs:line 23
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-07 23:02:09.347 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7144/medicos - 500 null text/plain; charset=utf-8 32052.4028ms

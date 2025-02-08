@@ -2,21 +2,13 @@ services:
   
   # .API MEDICOS
   medicos-api:
-    image: tatianacardoso/medicos-api:4
+    image: tatianacardoso/fiap-medicos-api:1
     build:
       context: .
       dockerfile: src/Medicos/Fiap.Hackathon.Medicos.API/Dockerfile
-    container_name: medico_app
-    restart: always    
-    ports:
-      - "5011:5011"  
-    environment:
-      - ASPNETCORE_URLS=http://+:5011  
+    container_name: fiap-medico_app
+    restart: always        
     #environment:
      # ASPNETCORE_ENVIRONMENT: "Docker" 
-    networks:
-      - techchallenge-hackathon
+
  
-networks:
-  techchallenge-hackathon:
-    external: true

@@ -1,4 +1,6 @@
 ﻿using Fiap.Hackathon.Common.Shared.Shared.Exceptions;
+using Fiap.Hackathon.Medicos.Application.Abstractions.Autenticacao.IClients;
+using Fiap.Hackathon.Medicos.Application.Abstractions.Autenticacao.Requests;
 using Fiap.Hackathon.Medicos.Application.Abstractions.GeoLocalizacao.IClients;
 using Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.IFactories;
 using Fiap.Hackathon.Medicos.Application.Abstractions.Medicos.IRepositories;
@@ -15,10 +17,13 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Factories
     {
         private readonly IGeoLocalizacaoClient _geoLocalizacaoClient;
         private readonly IMedicoRepository _repository;
-        public MedicoFactory(IGeoLocalizacaoClient geoLocalizacaoClient, IMedicoRepository repository)
+        private readonly IAutenticacaoClient _clientAutenticacao;
+
+        public MedicoFactory(IGeoLocalizacaoClient geoLocalizacaoClient, IMedicoRepository repository, IAutenticacaoClient clientAutenticacao)
         {
             _geoLocalizacaoClient = geoLocalizacaoClient;
             _repository = repository;
+            _clientAutenticacao = clientAutenticacao;
         }
         public async Task<Medico> CreateAsync(MedicoRequest request)
         {
@@ -67,6 +72,17 @@ namespace Fiap.Hackathon.Medicos.Application.Medicos.Factories
                 medico!.HashSenha();
                 medico.HashCPF();
             }
+
+            var result = await _clientAutenticacao.SaveAsync(new UsuarioRequest() { 
+                Documento = request.CPF.RemoveMask(),
+                Email = request.Email,
+                Nome = request.Nome,
+                Senha = request.Senha,
+                TipoPerfil = TipoPerfilEnumerador.Medico
+            });
+
+            medico.ChangeIdUsuario(result.IdUsuario);
+
             return medico;
         }
     }

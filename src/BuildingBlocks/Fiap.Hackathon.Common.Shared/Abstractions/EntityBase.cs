@@ -23,6 +23,10 @@ namespace Fiap.Hackathon.Common.Shared.Abstractions
             Active = true;
         }
 
+        public void ChangeIdUsuario(Guid id)
+        {
+            Id = id;
+        }
         public bool IsActive()
         {
             return Active;
