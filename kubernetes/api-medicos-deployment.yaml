@@ -1,0 +1,72 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hackathon-medicos-api
+  labels:
+    app: hackathon-medicos-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hackathon-medicos-api
+  template:
+    metadata:
+      labels:
+        app: hackathon-medicos-api
+    spec:
+      containers:
+        - name: container-hackathon-medicos-api
+          image: tatianacardoso/medicos-api:4
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5011
+            initialDelaySeconds: 30
+            periodSeconds: 60
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 5011
+            initialDelaySeconds: 20
+            periodSeconds: 60
+            failureThreshold: 3
+          ports:
+            - containerPort: 5011
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Production"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-hackathon-medicos-api
+  labels:
+    app: hackathon-medicos-api
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 5011
+      nodePort: 31190
+  selector:
+    app: hackathon-medicos-api
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: hpa-hackathon-medicos-api
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: hackathon-medicos-api
+  minReplicas: 1
+  maxReplicas: 4
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70

@@ -2,6 +2,7 @@ services:
   
   # .API MEDICOS
   medicos-api:
+    image: tatianacardoso/medicos-api:4
     build:
       context: .
       dockerfile: src/Medicos/Fiap.Hackathon.Medicos.API/Dockerfile
