@@ -42,7 +42,7 @@ namespace Fiap.Hackathon.Medicos.API.Middlewares
 
         private async Task<bool> ValidarToken(string token)
         {
-            var urlValidacao = "http://localhost:5010/v1/autenticacao/validacoes-tokens"; // Ajuste a URL correta
+            var urlValidacao = "http://service-hackathon-autenticacao/v1/autenticacao/validacoes-tokens"; // Ajuste a URL correta
 
             var response = await _httpClient.PostAsJsonAsync(urlValidacao, new { token = token });
 

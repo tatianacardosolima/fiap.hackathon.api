@@ -59,6 +59,13 @@ spec:
           ports:
             - name: "db-port"
               containerPort: 27017
+          livenessProbe:
+            tcpSocket:
+              port: 27017
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
           env:
             - name: MONGO_INITDB_ROOT_USERNAME
               valueFrom:
@@ -72,7 +79,25 @@ spec:
                   key: MONGO_INITDB_ROOT_PASSWORD
           volumeMounts:
             - mountPath: /data/db
-              name: mongo-db-storage     
+              name: mongo-db-storage
+        - name: container-mongo-db-exporter
+          image: bitnami/mongodb-exporter:latest
+          args:
+            - "--mongodb.uri=mongodb://$(MONGO_INITDB_ROOT_USERNAME):$(MONGO_INITDB_ROOT_PASSWORD)@localhost:27017"
+          ports:
+            - name: "exporter-port"
+              containerPort: 9216
+          env:
+            - name: MONGO_INITDB_ROOT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-db-secret
+                  key: MONGO_INITDB_ROOT_USERNAME
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-db-secret
+                  key: MONGO_INITDB_ROOT_PASSWORD
       volumes:
         - name: mongo-db-storage
           persistentVolumeClaim: 
@@ -81,15 +106,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: service-mongo-medicos-db
+  name: service-mongo-db
   labels:
     app: mongo-db
 spec:
   type: NodePort
   ports:
     - name: db-port
-      port: 27017
+      port: 27018
       targetPort: 27017
-      nodePort: 31010
+      nodePort: 31002
   selector:
     app: mongo-db
