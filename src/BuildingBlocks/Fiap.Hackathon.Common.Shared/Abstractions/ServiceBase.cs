@@ -5,7 +5,7 @@ using Fiap.Hackathon.Common.Shared.Shared.Exceptions;
 
 namespace Fiap.Hackathon.Common.Shared.Abstractions
 {
-    public class ServiceBase <TEntity, TRequest,TResponse> 
+    public abstract class ServiceBase <TEntity, TRequest,TResponse> 
         where TEntity : EntityBase
         where TRequest : IRequest
         where TResponse: ResponseBase<TEntity>, new()

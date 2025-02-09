@@ -823,3 +823,16 @@ System.Threading.Tasks.TaskCanceledException: The request was canceled due to th
 2025-02-08 16:07:55.826 -03:00 [INF] Executed action Fiap.Hackathon.Medicos.API.Controllers.MedicoController.GetByIdAsync (Fiap.Hackathon.Medicos.API) in 10772.8263ms
 2025-02-08 16:07:55.891 -03:00 [INF] Executed endpoint 'Fiap.Hackathon.Medicos.API.Controllers.MedicoController.GetByIdAsync (Fiap.Hackathon.Medicos.API)'
 2025-02-08 16:07:55.970 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7144/v1/medicos/68cafb63-1da1-4256-9b6b-c747a11ed808 - 200 null application/json; charset=utf-8 151724.3623ms
+2025-02-08 21:21:25.457 -03:00 [INF] Now listening on: https://localhost:7144
+2025-02-08 21:21:25.688 -03:00 [INF] Now listening on: http://localhost:5008
+2025-02-08 21:21:25.719 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-08 21:21:25.753 -03:00 [INF] Hosting environment: Development
+2025-02-08 21:21:25.802 -03:00 [INF] Content root path: C:\_DEV\GitHubPortifolio\fiap.hackathon.api\src\Medicos\Fiap.Hackathon.Medicos.API
+2025-02-08 21:21:27.314 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/index.html - null null
+2025-02-08 21:21:29.493 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/index.html - 200 null text/html;charset=utf-8 2214.4029ms
+2025-02-08 21:21:29.638 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_vs/browserLink - null null
+2025-02-08 21:21:29.638 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-08 21:21:30.135 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_framework/aspnetcore-browser-refresh.js - 200 13788 application/javascript; charset=utf-8 497.6916ms
+2025-02-08 21:21:30.320 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 682.636ms
+2025-02-08 21:21:30.538 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - null null
+2025-02-08 21:21:31.548 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7144/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 1001.54ms
